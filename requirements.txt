@@ -1,0 +1,7 @@
+multilingual-clip
+torch
+transformers
+numpy
+scikit-learn
+tqdm
+Pillow

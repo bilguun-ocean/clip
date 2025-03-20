@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .image-box {
+            margin: 10px;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 5 Matching Images</h1>
+    <p>Query: <strong>{{ caption }}</strong></p>
+
+    {% if image_ids %}
+        <div class="image-container">
+            {% for image_id in image_ids %}
+                <div class="image-box">
+                    <img src="https://storage.googleapis.com/flickr30k-images/{{ image_id }}" alt="{{ image_id }}">
+                    <p>{{ image_id }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No matches found.</p>
+    {% endif %}
+
+    <br>
+    <a href="/">🔍 Search Again</a>
+</body>
+</html>
