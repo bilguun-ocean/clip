@@ -12,9 +12,6 @@ model, preprocess = clip.load("ViT-B/32", device=device)
 # Load the dataset (CSV with image_id and captions)
 dataset = pd.read_csv("eng_dataset.csv")
 
-# Check total number of rows in the CSV
-print(f"Total number of rows in CSV: {len(dataset)}")
-
 # Count the number of unique image_ids
 unique_image_ids = dataset['image_id'].unique()
 print(f"Number of unique image_ids: {len(unique_image_ids)}")

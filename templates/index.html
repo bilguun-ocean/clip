@@ -9,7 +9,14 @@
     <h1>Find Similar Images</h1>
     <form action="/search" method="post">
         <label for="caption">Enter Caption:</label>
-        <input type="text" id="caption" name="caption" required>
+        <input type="text" id="caption" name="caption" required><br><br>
+
+        <label for="model_choice">Choose model:</label>
+        <select name="model_choice" id="model_choice">
+            <option value="clip">CLIP</option>
+            <option value="mclip">mCLIP</option>
+        </select><br><br>
+
         <button type="submit">Search</button>
     </form>
 </body>
