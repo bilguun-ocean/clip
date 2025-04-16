@@ -3,3 +3,5 @@ venv/
 
 # Ignore NumPy binary files
 *.npz
+
+fine_tuned_multilingual_clip/
